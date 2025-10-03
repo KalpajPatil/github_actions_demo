@@ -25,9 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: show current directory
-      run: |
-        pwd
-        ll
+      run: echo "packaging the app now"
     - name: Package the app
       uses: actions/upload-artifact@v4
       with:
