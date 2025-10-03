@@ -31,7 +31,5 @@ jobs:
 
     - name: publishing the app
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-      with:
-        name: some-random-name
-        path: target/*.jar
-        retention-days: 1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
